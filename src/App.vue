@@ -1,15 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld msg="Formulär"/>
+  <div id="app">
+    <SearchAutocomplete
+      :items="[
+        'Apple',
+        'Banana',
+        'Orange',
+        'Mango',
+        'Pear',
+        'Peach',
+        'Grape',
+        'Tangerine',
+        'Pineapple'
+      ]"
+    />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchAutocomplete from './components/ContactSearch.vue'
+
+import HelloWorld from './components/HelloWorld.vue';
+// import TextField from './components/TextField.vue';
+
 
 export default {
   name: 'App',
+  created () {
+            document.title = "Favue - Felanmälning";
+        },
   components: {
-    HelloWorld
+    HelloWorld,
+    SearchAutocomplete
   }
 }
 </script>
@@ -20,7 +42,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: rgb(255, 255, 255);
 }
 </style>
